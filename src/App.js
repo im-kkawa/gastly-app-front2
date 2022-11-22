@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Button from '@mui/material/Button';
+import Header from './components/header';
+import ApplicationBar from './components/applicationBar';
+import SearchCondition from './components/searchCondition';
+import SearchResult from './components/searchResult';
 
 const App = () => {
   const url = '/users';
@@ -11,6 +15,10 @@ const App = () => {
 
   return (
     <div classname='App'>
+      <Header />
+      <ApplicationBar />
+      <SearchCondition />
+      <SearchResult />
       <h1>Users</h1>
       {users.map((user, index) => (
         <div key={index}>{user.name}</div>
@@ -30,7 +38,7 @@ const App = () => {
               });
           }}
         >
-          cssなくてもいい感じのボタン
+          TEST
         </Button>
       </div>
     </div>
