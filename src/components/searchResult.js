@@ -7,8 +7,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import pic1 from './img/yakitori.jpg';
+import pic2 from './img/funamori.jpg';
+import pic3 from './img/nikubaru.jpg';
 
 export default function SearchResult() {
+  console.log(__dirname);
   return (
     <div>
       <div>利用実績のある規模での検索結果だとわかるようなメッセージ</div>
@@ -17,7 +21,7 @@ export default function SearchResult() {
           <CardMedia
             component='img'
             height='140'
-            image='/static/images/cards/contemplative-reptile.jpg'
+            image={pic1}
             alt='green iguana'
           />
           <CardContent>
@@ -38,7 +42,7 @@ export default function SearchResult() {
           <CardMedia
             component='img'
             height='140'
-            image='/static/images/cards/contemplative-reptile.jpg'
+            image={pic2}
             alt='green iguana'
           />
           <CardContent>
@@ -59,7 +63,7 @@ export default function SearchResult() {
           <CardMedia
             component='img'
             height='140'
-            image='/static/images/cards/contemplative-reptile.jpg'
+            image={pic3}
             alt='green iguana'
           />
           <CardContent>
