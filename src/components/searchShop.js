@@ -4,11 +4,17 @@ import SearchResult from './searchShop/searchResult';
 
 const SearchShop = () => {
   const [searchShopIsSubmitted, setSearchShopIsSubmitted] = useState(false);
+  const [resultSearchShop, setResultSearchShop] = useState();
 
   return (
     <div>
-      <SearchCondition setSearchShopIsSubmitted={setSearchShopIsSubmitted} />
-      {searchShopIsSubmitted && <SearchResult />}
+      <SearchCondition
+        setSearchShopIsSubmitted={setSearchShopIsSubmitted}
+        setResultSearchShop={setResultSearchShop}
+      />
+      {searchShopIsSubmitted && (
+        <SearchResult resultSearchShop={resultSearchShop} />
+      )}
     </div>
   );
 };

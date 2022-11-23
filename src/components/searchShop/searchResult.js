@@ -11,11 +11,12 @@ import pic1 from '../img/yakitori.jpg';
 import pic2 from '../img/funamori.jpg';
 import pic3 from '../img/nikubaru.jpg';
 
-export default function SearchResult() {
+export default function SearchResult(props) {
   console.log(__dirname);
   return (
     <div>
       <div>利用実績のある規模での検索結果だとわかるようなメッセージ</div>
+      <div>{props.resultSearchShop[1]['name']}</div>
       <Stack direction='row' spacing={2}>
         <Card sx={{ maxWidth: 345 }}>
           <CardMedia

@@ -27,6 +27,7 @@ export default function SearchCondition(props) {
       .then((data) => {
         console.log(data);
         props.setSearchShopIsSubmitted(true);
+        props.setResultSearchShop(data);
       })
       .catch((err) => {
         console.log(err);
