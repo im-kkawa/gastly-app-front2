@@ -12,11 +12,26 @@ import SendIcon from '@mui/icons-material/Send';
 import Stack from '@mui/material/Stack';
 import SearchIcon from '@mui/icons-material/Search';
 
-export default function SearchCondition() {
+export default function SearchCondition(props) {
+  const url = '/shops/test';
+
   const [area, setArea] = useState('');
 
   const onChangeSetArea = (event) => {
     setArea(event.target.value);
+  };
+
+  const onClickSearchShopIsSubmitted = () => {
+    fetch(url, { method: 'GET' })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        props.setSearchShopIsSubmitted(true);
+      })
+      .catch((err) => {
+        console.log(err);
+        console.log('err');
+      });
   };
 
   return (
@@ -48,7 +63,11 @@ export default function SearchCondition() {
           {/* <Button variant='outlined' startIcon={<SearchIcon />}>
             検索
           </Button> */}
-          <Button variant='contained' startIcon={<SearchIcon />}>
+          <Button
+            variant='contained'
+            startIcon={<SearchIcon />}
+            onClick={onClickSearchShopIsSubmitted}
+          >
             検索
           </Button>
         </Stack>

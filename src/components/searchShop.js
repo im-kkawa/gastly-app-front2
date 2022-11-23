@@ -3,10 +3,12 @@ import SearchCondition from './searchShop/searchCondition';
 import SearchResult from './searchShop/searchResult';
 
 const SearchShop = () => {
+  const [searchShopIsSubmitted, setSearchShopIsSubmitted] = useState(false);
+
   return (
     <div>
-      <SearchCondition />
-      <SearchResult />
+      <SearchCondition setSearchShopIsSubmitted={setSearchShopIsSubmitted} />
+      {searchShopIsSubmitted && <SearchResult />}
     </div>
   );
 };
