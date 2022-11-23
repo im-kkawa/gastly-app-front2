@@ -7,9 +7,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import pic1 from './img/yakitori.jpg';
-import pic2 from './img/funamori.jpg';
-import pic3 from './img/nikubaru.jpg';
+import pic1 from '../img/yakitori.jpg';
+import pic2 from '../img/funamori.jpg';
+import pic3 from '../img/nikubaru.jpg';
 
 export default function SearchResult() {
   console.log(__dirname);

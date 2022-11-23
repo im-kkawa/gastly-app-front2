@@ -45,9 +45,9 @@ export default function SearchCondition() {
           >
             <TextField id='standard-basic' label='人数' variant='standard' />
           </Box>
-          <Button variant='outlined' startIcon={<SearchIcon />}>
+          {/* <Button variant='outlined' startIcon={<SearchIcon />}>
             検索
-          </Button>
+          </Button> */}
           <Button variant='contained' startIcon={<SearchIcon />}>
             検索
           </Button>

@@ -3,8 +3,7 @@ import './App.css';
 import Button from '@mui/material/Button';
 import Header from './components/header';
 import ApplicationBar from './components/applicationBar';
-import SearchCondition from './components/searchCondition';
-import SearchResult from './components/searchResult';
+import SearchShop from './components/searchShop';
 
 const App = () => {
   const url = '/users';
@@ -17,8 +16,7 @@ const App = () => {
     <div classname='App'>
       <Header />
       <ApplicationBar />
-      <SearchCondition />
-      <SearchResult />
+      <SearchShop />
       <h1>Users</h1>
       {users.map((user, index) => (
         <div key={index}>{user.name}</div>
