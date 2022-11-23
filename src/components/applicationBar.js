@@ -25,12 +25,7 @@ export default function ApplicationBar() {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position='static' sx={{ height: '35px' }}>
           <Toolbar>
-            {/* 理想はmarginleftをべたがきにしないでcenterに配置されるようにしたい */}
-            <Stack
-              direction='row'
-              spacing={4}
-              sx={{ ml: '50rem', mb: '1.7rem' }}
-            >
+            <Stack direction='row' spacing={4} sx={{ m: 'auto', mb: '1.9rem' }}>
               <Button
                 variant='text'
                 size='small'

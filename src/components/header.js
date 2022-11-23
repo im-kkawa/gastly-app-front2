@@ -39,7 +39,11 @@ export default function Header() {
         <AppBar position='static' color='primary'>
           <Toolbar>
             <FlatwareIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-            <Typography variant='h5' component='div' sx={{ flexGrow: 1 }}>
+            <Typography
+              variant='h5'
+              component='div'
+              sx={{ flexGrow: 1, fontWeight: 'bold' }}
+            >
               私の BIZakaya
             </Typography>
           </Toolbar>

@@ -38,18 +38,30 @@ export default function SearchResult(props) {
         <Stack direction='row' spacing={2} justifyContent='center'>
           {resultSearchShop.map((eachResultSearchShop, index) => {
             return (
-              <Card sx={{ maxWidth: 345 }} key={index}>
+              <Card sx={{ minWidth: 345, maxWidth: 345 }} key={index}>
                 <CardMedia
                   component='img'
                   height='140'
-                  // image={imgs[eachResultSearchShop['id'] - 1]}
                   image={imgs[index]}
                   alt='shop photo'
                 />
                 <CardContent>
-                  <Typography gutterBottom variant='h5' component='div'>
-                    {eachResultSearchShop['name']}
-                  </Typography>
+                  <CardActions>
+                    <Link
+                      href={eachResultSearchShop['url']}
+                      sx={{ m: 'auto' }}
+                      color='secondary'
+                    >
+                      <Typography
+                        gutterBottom
+                        variant='h5'
+                        component='div'
+                        sx={{ fontWeight: 'bold' }}
+                      >
+                        {eachResultSearchShop['name']}
+                      </Typography>
+                    </Link>
+                  </CardActions>
                   <Rating
                     name='shop-ratingAverage'
                     defaultValue={eachResultSearchShop['ratingAverage']}
@@ -60,9 +72,9 @@ export default function SearchResult(props) {
                     {eachResultSearchShop['comments']}
                   </Typography>
                 </CardContent>
-                <CardActions>
+                {/* <CardActions>
                   <Link href={eachResultSearchShop['url']}>Link</Link>
-                </CardActions>
+                </CardActions> */}
               </Card>
             );
           })}
