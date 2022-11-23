@@ -8,6 +8,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import Rating from '@mui/material/Rating';
 import img1 from '../img/yakitori.jpg';
 import img2 from '../img/funamori.jpg';
 import img3 from '../img/nikubaru.jpg';
@@ -49,6 +50,12 @@ export default function SearchResult(props) {
                   <Typography gutterBottom variant='h5' component='div'>
                     {eachResultSearchShop['name']}
                   </Typography>
+                  <Rating
+                    name='shop-ratingAverage'
+                    defaultValue={eachResultSearchShop['ratingAverage']}
+                    precision={0.1}
+                    readOnly
+                  />
                   <Typography variant='body2' color='text.secondary'>
                     {eachResultSearchShop['comments']}
                   </Typography>
