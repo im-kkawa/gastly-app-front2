@@ -13,33 +13,35 @@ const App = () => {
   useEffect(() => {}, []);
 
   return (
-    <div classname='App'>
+    <>
       <Header />
       <ApplicationBar />
-      <SearchShop />
-      <h1>Users</h1>
-      {users.map((user, index) => (
-        <div key={index}>{user.name}</div>
-      ))}
-      <div>
-        <Button
-          variant='contained'
-          onClick={() => {
-            fetch(url, { method: 'GET' })
-              .then((res) => res.json())
-              .then((data) => {
-                setUsers(data);
-              })
-              .catch((err) => {
-                console.log(err);
-                console.log('err');
-              });
-          }}
-        >
-          TEST
-        </Button>
+      <div className='centerContents'>
+        <SearchShop />
+        {/* <h1>Users</h1>
+        {users.map((user, index) => (
+          <div key={index}>{user.name}</div>
+        ))}
+        <div>
+          <Button
+            variant='contained'
+            onClick={() => {
+              fetch(url, { method: 'GET' })
+                .then((res) => res.json())
+                .then((data) => {
+                  setUsers(data);
+                })
+                .catch((err) => {
+                  console.log(err);
+                  console.log('err');
+                });
+            }}
+          >
+            TEST
+          </Button>
+        </div> */}
       </div>
-    </div>
+    </>
   );
 };
 
