@@ -5,7 +5,6 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import Rating from '@mui/material/Rating';
@@ -17,7 +16,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 export default function SearchResult(props) {
   const resultSearchShop = props.resultSearchShop;
-  const imgs = [img1, img2, img3];
+  const imgs = [img1, img3, img2];
 
   const theme = createTheme({
     palette: {

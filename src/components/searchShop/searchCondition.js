@@ -7,8 +7,6 @@ import Select from '@mui/material/Select';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import DeleteIcon from '@mui/icons-material/Delete';
-import SendIcon from '@mui/icons-material/Send';
 import Stack from '@mui/material/Stack';
 import SearchIcon from '@mui/icons-material/Search';
 import { ThemeProvider, createTheme } from '@mui/material/styles';

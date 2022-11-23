@@ -38,13 +38,22 @@ export default function Header() {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position='static' color='primary'>
           <Toolbar>
-            <FlatwareIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+            <FlatwareIcon
+              sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, ml: 5 }}
+            />
             <Typography
               variant='h5'
               component='div'
               sx={{ flexGrow: 1, fontWeight: 'bold' }}
             >
               私の BIZakaya
+            </Typography>
+            <Typography
+              variant='h5'
+              component='div'
+              sx={{ flexGrow: 0, fontSize: 18, mr: 5 }}
+            >
+              Gastly社 様
             </Typography>
           </Toolbar>
         </AppBar>
